@@ -2,7 +2,7 @@
 
 A modern neumorphic login/registration interface for ISPSC Supply Office 
 
-![Preview](preview.jpg)
+![Preview](login/image/login.png)
 
 ## Features
 - **Sleek Neumorphic Design** - Soft UI shadows and smooth animations
