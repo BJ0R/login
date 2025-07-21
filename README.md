@@ -1,6 +1,6 @@
 # ISPSC Supply Office Login 
 
-A modern neumorphic login/registration interface for ISPSC Supply Office Management System.
+A modern neumorphic login/registration interface for ISPSC Supply Office 
 
 ![Preview](preview.jpg)
 
