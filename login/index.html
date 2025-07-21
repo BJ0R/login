@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Office System</title>
+    <meta name="description" content="Login or register for Office System">
+    <meta name="robots" content="noindex, nofollow">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="icon" type="image/png" href="../images/logo.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-box login">
+            <form action="#" method="POST" id="loginForm">
+                <input type="hidden" name="action" value="login">
+                
+                <img src="image/logo.png" alt="Logo" class="college-logo" loading="lazy">
+                <h1>Sign In</h1>
+                
+                <div class="alert alert-danger" role="alert" id="loginError" style="display: none;"></div>
+                
+                <div class="input-box">
+                    <input type="text" name="username" id="loginUsername" placeholder="Username" required
+                           aria-label="Username" autocomplete="username">
+                    <i class='bx bxs-user' aria-hidden="true"></i>
+                </div>
+                <div class="input-box">
+                    <input type="password" name="password" id="loginPassword" placeholder="Password" required
+                           aria-label="Password" autocomplete="current-password">
+                    <i class='bx bxs-lock-alt toggle-password' tabindex="0" aria-label="Toggle password visibility"></i>
+                </div>
+                <div class="forgot-link">
+                    <a href="#" id="forgotPasswordLink" aria-label="Forgot password">Forgot Password?</a>
+                </div>
+                <button type="submit" class="btn" id="loginBtn">Login</button>
+                <p> Office System</p>
+            </form>
+        </div>
+
+        <div class="form-box register">
+            <form action="#" method="POST" id="registerForm">
+                <input type="hidden" name="action" value="signup">
+                
+                <img src="image/logo.png" alt="Logo" class="college-logo" loading="lazy">
+                <h1>Sign Up</h1>
+                
+                <div class="alert alert-danger" role="alert" id="registerError" style="display: none;"></div>
+                <div class="alert alert-success" role="alert" id="registerSuccess" style="display: none;"></div>
+                
+                <div class="input-box">
+                    <input type="text" name="username" id="registerUsername" placeholder="Username" required
+                           aria-label="Username" autocomplete="username">
+                    <i class='bx bxs-user' aria-hidden="true"></i>
+                </div>
+                <div class="input-box">
+                    <input type="email" name="email" id="registerEmail" placeholder="Email" required
+                           aria-label="Email" autocomplete="email">
+                    <i class='bx bxs-envelope' aria-hidden="true"></i>
+                </div>
+                <div class="input-box">
+                    <input type="password" name="password" id="registerPassword" placeholder="Password" required
+                           aria-label="Password" oninput="checkPasswordStrength(this.value)" autocomplete="new-password">
+                    <i class='bx bxs-lock-alt toggle-password' tabindex="0" aria-label="Toggle password visibility"></i>
+                    <div class="password-strength">
+                        <div class="password-strength-bar" id="passwordStrengthBar"></div>
+                    </div>
+                </div>
+                <button type="submit" class="btn" id="registerBtn">Register</button>
+                <p> Office System</p>
+            </form>
+        </div>
+
+        <div class="toggle-box">
+            <div class="toggle-panel toggle-left">
+                <h1>Welcome!</h1>
+                <p>Don't have an account? Register to access the Office System</p>
+                <button type="button" class="btn register-btn" aria-label="Switch to registration form">Register</button>
+            </div>
+
+            <div class="toggle-panel toggle-right">
+                <h1>Welcome Back!</h1>
+                <p>Already have an account? Login to access your dashboard</p>
+                <button type="button" class="btn login-btn" aria-label="Switch to login form">Login</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Forgot Password Modal -->
+    <div id="forgotPasswordModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Forgot Password</h2>
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <p>If you've forgotten your password, please contact the Main Office for assistance.</p>
+                <div class="contact-info">
+                    <p><i class="bi bi-envelope"></i> Email: admin123@gmail.com</p>
+                    <p><i class="bi bi-telephone"></i> Phone: (63) 912-345-6789</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
